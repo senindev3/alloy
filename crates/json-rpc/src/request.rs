@@ -291,8 +291,8 @@ where
 /// in-flight requests.
 #[derive(Clone, Debug)]
 pub struct SerializedRequest {
-    meta: RequestMeta,
-    request: Box<RawValue>,
+    pub meta: RequestMeta,
+    pub request: Box<RawValue>,
 }
 
 impl<Params> std::convert::TryFrom<Request<Params>> for SerializedRequest
